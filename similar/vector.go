@@ -16,7 +16,7 @@ func (w wordVector) strings(words []string) vector.Vector {
 			w[word] = i
 		}
 		if i >= len(v) {
-			v = append(v, make([]int, i+1-len(v))...)
+			v = append(v, vector.New(i+1-len(v))...)
 		}
 		v[i]++
 	}
